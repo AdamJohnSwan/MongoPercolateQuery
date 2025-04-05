@@ -1,0 +1,43 @@
+root = true
+
+# All files
+[*]
+indent_style = space
+
+
+[*.xml]
+indent_size = 4
+[*.js]
+indent_size = 4
+[*.ts]
+indent_size = 4
+[*.tsx]
+indent_size = 4
+
+[*.cs]
+indent_size = 4
+csharp_style_namespace_declarations = file_scoped
+csharp_style_var_for_built_in_types = false
+dotnet_style_prefer_conditional_expression_over_return = false
+
+dotnet_analyzer_diagnostic.severity = warning
+dotnet_analyzer_diagnostic.category-CodeQuality.severity = warning
+dotnet_analyzer_diagnostic.category-Design.severity = warning
+dotnet_analyzer_diagnostic.category-Documentation.severity = warning
+dotnet_analyzer_diagnostic.category-Globalization.severity = warning
+dotnet_analyzer_diagnostic.category-Interoperability.severity = warning
+dotnet_analyzer_diagnostic.category-Maintainability.severity = warning
+dotnet_analyzer_diagnostic.category-Naming.severity = warning
+dotnet_analyzer_diagnostic.category-Performance.severity = warning
+dotnet_analyzer_diagnostic.category-SingleFile.severity = warning
+dotnet_analyzer_diagnostic.category-Reliability.severity = warning
+dotnet_analyzer_diagnostic.category-Security.severity = warning
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+dotnet_analyzer_diagnostic.category-Usage.severity = warning
+
+# disable warnings
+dotnet_diagnostic.IDE0058.severity = none
+dotnet_diagnostic.IDE0022.severity = none
+dotnet_diagnostic.CA1716.severity = none
+dotnet_diagnostic.CA1848.severity = none
+dotnet_diagnostic.CA1852.severity = none
