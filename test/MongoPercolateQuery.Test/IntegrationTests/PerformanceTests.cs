@@ -6,7 +6,7 @@ using MongoPercolateQuery.Test.TestModels;
 using System.Diagnostics;
 using Xunit.Abstractions;
 
-namespace MongoPercolateQuery.Test.LiveTests;
+namespace MongoPercolateQuery.Test.IntegrationTests;
 
 public class PerformanceTests
 {

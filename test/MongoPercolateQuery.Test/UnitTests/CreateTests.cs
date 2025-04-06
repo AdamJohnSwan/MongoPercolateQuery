@@ -1,6 +1,6 @@
 ﻿using MongoPercolateQuery.Models;
 
-namespace MongoPercolateQuery.Test;
+namespace MongoPercolateQuery.Test.UnitTests;
 
 public class CreateTests
 {

@@ -3,7 +3,7 @@ using MongoDB.Driver;
 using MongoPercolateQuery.Extensions;
 using MongoPercolateQuery.Test.TestModels;
 
-namespace MongoPercolateQuery.Test;
+namespace MongoPercolateQuery.Test.UnitTests;
 
 public class MatchTests
 {
