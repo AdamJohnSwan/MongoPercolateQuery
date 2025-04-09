@@ -8,7 +8,7 @@ using Xunit.Abstractions;
 
 namespace MongoPercolateQuery.Test.IntegrationTests;
 
-public class PerformanceTests
+public class PerformanceTests : IDisposable
 {
     private readonly ITestOutputHelper _output;
     private readonly MongoDbRunner _runner;
@@ -22,7 +22,7 @@ public class PerformanceTests
 
         MongoClient client = new(_runner.ConnectionString);
         IMongoDatabase database = client.GetDatabase("IntegrationTest");
-        _queries = database.GetCollection<Query>("TestCollection");
+        _queries = database.GetCollection<Query>("QueryCollection");
     }
 
     [Fact]
@@ -50,5 +50,11 @@ public class PerformanceTests
         // Log
         _output.WriteLine($"Elapsed time: {timer.ElapsedMilliseconds} ms");
         Assert.Single(result);
+    }
+
+    public void Dispose()
+    {
+        GC.SuppressFinalize(this);
+        _runner.Dispose();
     }
 }
